@@ -1,15 +1,17 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Xml.Linq;
 
 namespace UCC_Coding_Exam
 {
+    using System.IO;
+
     public class XMLFileReader
     {
         private readonly XNamespace ermlNameSpace = "http://www.ingeo.com/2001/v2/documents";
 
-        private readonly string saveToPath = @"D:\Practice-Dev\UCC_Coding_Exam\UpdatedXML\";
-        public void ReturnListOFGrantors(string xmlFilePath)
+
+        public void ReturnListOfGrantors(string xmlFilePath)
         {
             XDocument xml = XDocument.Load(xmlFilePath);
             var query = from c in xml.Descendants(ermlNameSpace + "Multiple")
@@ -61,19 +63,21 @@ namespace UCC_Coding_Exam
         public void Update_Required_Attribute_Of_Beneficiary_LastName(string xmlFilePath)
         {
             XDocument doc = XDocument.Load(xmlFilePath);
-            Console.WriteLine("Enter the file name with extension .xml");
-            var fileName = Console.ReadLine();
             var query = (from e in doc.Descendants(ermlNameSpace + "LastName")
                          where e.Attribute("LabelKey")?.Value == "OriginalBeneficiary"
                          select e).First();
 
-            if (query != null)
+            Console.WriteLine("Enter the full path and the fileName with extension:");
+            var fullPath = Console.ReadLine();
+
+            var isFileNameQualified = Path.GetExtension(".xml");
+            if (query != null && fullPath != null && isFileNameQualified.Contains(".xml"))
             {
                 query.Attribute(@"required")?.SetValue("true");
-                doc.Save(saveToPath + fileName);
+                doc.Save(fullPath);
             }
 
-            Console.WriteLine("File saved to : " + saveToPath);
+            Console.WriteLine("File saved to : " + fullPath);
             Console.WriteLine("End of Application");
             Console.ReadLine();
         }

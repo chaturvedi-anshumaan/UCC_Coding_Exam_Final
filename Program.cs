@@ -1,11 +1,15 @@
-﻿namespace UCC_Coding_Exam
+﻿using System;
+using System.IO;
+
+namespace UCC_Coding_Exam
 {
+ 
     public class Program
     {
-        static void Main(string[] args)
+        private static readonly string xmlFilePath = "..\\..\\sampleXML\\SampleXML.xml";
+        public static void Main(string[] args)
         {
-           Console.WriteLine("Please enter the full path of file with extension at end:");
-            string xmlFilePath = Console.ReadLine();
+            
             string isAnXMLFile = Path.GetExtension(xmlFilePath);
             if(isAnXMLFile != null && isAnXMLFile.Contains(".xml"))
             {

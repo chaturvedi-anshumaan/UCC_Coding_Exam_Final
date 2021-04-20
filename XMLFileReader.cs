@@ -1,11 +1,10 @@
-using System;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
 namespace UCC_Coding_Exam
 {
-    using System.IO;
-
     public class XMLFileReader
     {
         private readonly XNamespace ermlNameSpace = "http://www.ingeo.com/2001/v2/documents";
@@ -67,17 +66,21 @@ namespace UCC_Coding_Exam
                          where e.Attribute("LabelKey")?.Value == "OriginalBeneficiary"
                          select e).First();
 
-            Console.WriteLine("Enter the full path and the fileName with extension:");
-            var fullPath = Console.ReadLine();
-
-            var isFileNameQualified = Path.GetExtension(".xml");
-            if (query != null && fullPath != null && isFileNameQualified.Contains(".xml"))
+            string relativePath = "..\\..\\UpdatedXML\\";
+            string filePath = relativePath + "UpdatedXML.xml";
+            if (query != null && Directory.Exists(relativePath))
             {
                 query.Attribute(@"required")?.SetValue("true");
-                doc.Save(fullPath);
+                doc.Save(filePath);
+            }
+            else
+            {
+                Directory.CreateDirectory(relativePath);
+                query.Attribute(@"required")?.SetValue("true");
+                doc.Save(filePath);
             }
 
-            Console.WriteLine("File saved to : " + fullPath);
+            Console.WriteLine("File saved to : " + filePath);
             Console.WriteLine("End of Application");
             Console.ReadLine();
         }

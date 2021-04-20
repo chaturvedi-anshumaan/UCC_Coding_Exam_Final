@@ -1,0 +1,7 @@
+D:\Practice-Dev\UCC_Coding_Exam\bin\Debug\UCC_Coding_Exam.exe.config
+D:\Practice-Dev\UCC_Coding_Exam\bin\Debug\UCC_Coding_Exam.exe
+D:\Practice-Dev\UCC_Coding_Exam\bin\Debug\UCC_Coding_Exam.pdb
+D:\Practice-Dev\UCC_Coding_Exam\obj\Debug\UCC_Coding_Exam.csprojAssemblyReference.cache
+D:\Practice-Dev\UCC_Coding_Exam\obj\Debug\UCC_Coding_Exam.csproj.CoreCompileInputs.cache
+D:\Practice-Dev\UCC_Coding_Exam\obj\Debug\UCC_Coding_Exam.exe
+D:\Practice-Dev\UCC_Coding_Exam\obj\Debug\UCC_Coding_Exam.pdb

@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<erml:Document version="2" type="Document" DocId="" xmlns:dotNetCode="urn:schemas-microsoft-com:C#" xmlns="http://www.w3.org/1999/xhtml" xmlns:msxml="urn:schemas-microsoft-com:xslt" xmlns:ms="urn:schemas-microsoft-com:vb" xmlns:erml="http://www.ingeo.com/2001/v2/documents">
+  <html>
+    <body style="FONT-FAMILY: Times New Roman; font-size:10pt;">
+      <style type="text/css">
+        .Data {font-size:10pt;}
+        .Title {font-size:12pt;text-align:center;font-weight:bold;}
+      </style>
+      <table width="100%" style="BORDER-BOTTOM: black thin solid; HEIGHT: 1.5in">
+        <tr>
+          <td valign="top" style="border-right:thin solid black;width:3in;height:1.5in">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <erml:Return ReturnType="REQUESTINGPARTY">
+                <tr>
+                  <td>
+                    <div class="Data">
+                      <b>RECORDING REQUESTED BY:</b>
+                    </div>
+                    <div class="Data">
+                      <erml:Company fill="textbox" tooltip="Requesting Company" id="0201" validation="">CSC - Test Organization</erml:Company>
+                    </div>
+                    <div class="Data">
+                      <erml:Name fill="textbox" tooltip="Requesting Name" id="0202" required="false" validation="">Michele Wingate</erml:Name>
+                    </div>
+                    <div class="Data">
+                      <erml:StreetAddress1 fill="textbox" tooltip="Requesting Street Address Line 1" id="0203" validation="">919 N 1000 W</erml:StreetAddress1>
+                    </div>
+                    <div class="Data">
+                      <erml:StreetAddress2 fill="textbox" tooltip="Requesting Street Address Line 2" id="0204" required="false" validation=""></erml:StreetAddress2>
+                    </div>
+                    <div class="Data">
+                      <erml:City fill="textbox" tooltip="Requesting City" id="0205" validation="">Logan</erml:City>,
+                      <erml:State fill="textbox" tooltip="Requesting State" id="0206" validation="">UT</erml:State><erml:Zip fill="textbox" tooltip="Requesting Zip" id="0207" validation="">84321</erml:Zip></div>
+                  </td>
+                </tr>
+              </erml:Return>
+              <tr>
+                <td height="10pt" />
+              </tr>
+              <erml:Return ReturnType="MAILINGPARTY">
+                <tr>
+                  <td>
+                    <div class="Data">
+                      <b>AND WHEN RECORDED MAIL TO:</b>
+                    </div>
+                    <div class="Data">
+                      <erml:Company fill="textbox" tooltip="Mailing Company" id="0101" validation="">CSC - Test Organization</erml:Company>
+                    </div>
+                    <div class="Data">
+                      <erml:Name fill="textbox" tooltip="Mailing Name" id="0102" required="false" validation=""></erml:Name>
+                    </div>
+                    <div class="Data">
+                      <erml:StreetAddress1 fill="textbox" tooltip="Mailing Street Address Line 1" id="0103" validation="">919 N 1000 W</erml:StreetAddress1>
+                    </div>
+                    <div class="Data">
+                      <erml:StreetAddress2 fill="textbox" tooltip="Mailing Street Address Line 2" id="0104" required="false" validation=""></erml:StreetAddress2>
+                    </div>
+                    <div class="Data">
+                      <erml:City fill="textbox" tooltip="Mailing City" id="0105" validation="">Logan</erml:City>,
+                      <erml:State fill="textbox" tooltip="Mailing State" id="0106" validation="">UT</erml:State><erml:Zip fill="textbox" tooltip="Mailing Zip" id="0107" validation="">84321</erml:Zip></div>
+                  </td>
+                </tr>
+              </erml:Return>
+            </table>
+            <table name="LoanTable" style="max-width: 300px;">
+              <tr>
+                <td>
+                  <span LabelKey="LoanNumber" style="display:none">
+                    <div class="Data" id="loan_number">
+                      Loan #:
+                      <b><erml:Misc id="1203" type="LoanNo" fill="textbox" tooltip="Loan No. (ie. 1234567893)" required="false" validation="" LabelKey="LoanNumber"></erml:Misc></b></div>
+                  </span>
+                  <span LabelKey="InvestorLoanNumber" style="display:none">
+                    <div class="Data">
+                      Investor Loan #:
+                      <b><erml:Misc id="1204" type="Investor LoanNo" fill="textbox" tooltip="Investor Loan No (ie. 1234567893)" required="false" validation="" LabelKey="InvestorLoanNumber"></erml:Misc></b></div>
+                  </span>
+                  <span LabelKey="Pool" style="display:none">
+                    <div class="Data">
+                      Pool #:
+                      <b><erml:Misc id="1205" type="PoolNo" fill="textbox" tooltip="Pool No. (ie. 321354563)" required="false" validation="" LabelKey="Pool" /></b></div>
+                  </span>
+                  <span LabelKey="MERSID" style="display:none">
+                    <div class="Data" id="MERSID">
+                      MIN:
+                      <b><erml:Other id="1503" type="MERS ID" fill="textbox" tooltip="MERS ID" LabelKey="MERSID" required="false" validation=""></erml:Other></b></div>
+                    <div id="MERSTelephone" class="Data">
+                      MERS Phone #:
+                      <b><erml:Other id="1504" type="MERS Telephone" fill="textbox" tooltip="MERS Telephone" required="false" validation="">(888) 679-6377</erml:Other></b></div>
+                  </span>
+                </td>
+              </tr>
+            </table>
+            <erml:BarCode />
+          </td>
+          <td align="middle">
+            <erml:EndorsementArea EndorseId="1" />
+          </td>
+        </tr>
+      </table>
+      <div class="Title">
+        <erml:InstrumentType id="1201" code="Recon" required="true" tooltip="Document Title" fill="textbox">FULL RECONVEYANCE</erml:InstrumentType>
+      </div>
+      <br style="line-height:4pt;" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <div class="Data">
+            THE UNDERSIGNED, <b><erml:Name type="Grantee" fill="textbox" tooltip="Current Trustee" required="true" validation=""></erml:Name>,
+            </b> whose address is
+            <b><erml:StreetAddress fill="textbox" tooltip="Current Trustee Street Address (ie. 132 Anywhere St.)" required="true" validation=""></erml:StreetAddress><erml:City fill="textbox" tooltip="Current Trustee City (ie. Merrifield)" required="true" validation=""></erml:City>
+              , <erml:State fill="textbox" tooltip="Current Trustee State (ie.Michigan)" required="true" validation=""></erml:State>, <erml:Zip fill="textbox" tooltip="Current Trustee Zip (ie. 01234)" required="true" validation=""></erml:Zip>,
+            </b> trustee of the
+            Note mentioned below, secured by the Deed of Trust described below does
+            hereby certify that	the same has been
+
+            paid in full and the lien therein created and retained is hereby
+            released:
+          </div>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <div class="Data">
+              Original Grantor(S):<b><span style="text-decoration:bold"><erml:Multiple tooltip="Grantor" formatting="" max="10"><erml:E type="Grantor"><erml:FirstName fill="textbox" tooltip="Grantor First Name" required="false" validation="">John</erml:FirstName><erml:MI fill="textbox" tooltip="Grantor Middle Name" required="false" validation="">F.</erml:MI><erml:LastName fill="textbox" tooltip="Grantor Last Name/Company" required="true" validation="">Doe</erml:LastName><erml:Suffix fill="textbox" tooltip="Grantor Suffix" required="false" validation="">Sr.</erml:Suffix><erml:Title fill="textbox" tooltip="Grantor Title" required="false" validation="" /></erml:E><erml:E type="Grantor"><erml:FirstName fill="textbox" tooltip="Grantor First Name" required="false" validation="">Jane</erml:FirstName><erml:MI fill="textbox" tooltip="Grantor Middle Name" required="false" validation="">G.</erml:MI><erml:LastName fill="textbox" tooltip="Grantor Last Name/Company" required="true" validation="">Doe</erml:LastName><erml:Suffix fill="textbox" tooltip="Grantor Suffix" required="false" validation="" /><erml:Title fill="textbox" tooltip="Grantor Title" required="false" validation="" /></erml:E><erml:E type="Grantor"><erml:FirstName fill="textbox" tooltip="Grantor First Name" required="false" validation="">John</erml:FirstName><erml:MI fill="textbox" tooltip="Grantor Middle Name" required="false" validation="" /><erml:LastName fill="textbox" tooltip="Grantor Last Name/Company" required="true" validation="">Smith</erml:LastName><erml:Suffix fill="textbox" tooltip="Grantor Suffix" required="false" validation="">III</erml:Suffix><erml:Title fill="textbox" tooltip="Grantor Title" required="false" validation="" /></erml:E></erml:Multiple></span></b></div>
+            <span id="Orig Trste" LabelKey="OriginalTrustee" style="display:none">
+              <div class="Data">
+                Original Trustee(S):
+                <b><span><erml:Multiple tooltip="Original Trustee" formatting="" max="5"><erml:R type="Original Trustee"><erml:FirstName fill="textbox" tooltip="Original Trustee First Name" required="false" validation="" /><erml:MI fill="textbox" tooltip="Original Trustee Middle Name" required="false" validation="" /><erml:LastName fill="textbox" tooltip="Original Trustee Last Name/Company" required="false" validation="" LabelKey="OriginalTrustee"></erml:LastName><erml:Suffix fill="textbox" tooltip="Original Trustee Suffix" required="false" validation="" /><erml:Title fill="textbox" tooltip="Original Trustee Title" required="false" validation="" /></erml:R></erml:Multiple></span></b></div>
+            </span>
+            <span>
+              <div class="Data" LabelKey="OriginalBeneficiary">
+                Original Beneficiary:
+                <b><erml:EX type="Original Beneficiary"><erml:FirstName fill="textbox" tooltip="Original Beneficiary First Name" required="false" validation="" /><erml:MI fill="textbox" tooltip="Original Beneficiary Middle Name" required="false" validation="" /><erml:LastName fill="textbox" tooltip="Original Beneficiary Last Name/Company" required="true" validation="" LabelKey="OriginalBeneficiary" /><erml:Title fill="textbox" tooltip="Original Beneficiary Title" required="false" validation="" /></erml:EX></b></div>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <erml:ReferencedInfo>
+        <div class="Data">
+          <span LabelKey="DateofNote" style="display:none">
+            dated:
+            <b><erml:Date fill="textbox" tooltip="Execution  (mm/dd/yyyy)" DateType="EXECUTION" id="0701" required="true" validation="mmddyyyy" LabelKey="DateofNote"></erml:Date></b></span>
+          <span LabelKey="OriginalRecordingDate" style="display:none">
+            Recorded:
+            <b><erml:Date fill="textbox" tooltip="Date Recorded (mm/dd/yyyy)" DateType="RECORDED" required="true" id="0702" validation="mmddyyyy" LabelKey="OriginalRecordingDate">11/4/2019</erml:Date></b></span>
+          <span LabelKey="OriginalInstrumentNo" style="display:none">
+            Instrument:
+            <b><erml:EntryNo fill="textbox" tooltip="Instrument/Document Number" required="true" validation="" LabelKey="OriginalInstrumentNo"></erml:EntryNo></b></span>
+          <span LabelKey="OriginalDeedBook" style="display:none">
+            Book:
+            <b><erml:Book fill="textbox" tooltip="Book No" required="false" validation="" LabelKey="OriginalDeedBook"></erml:Book></b></span>
+          <span LabelKey="OriginalDeedPage" style="display:none">
+            Page:
+            <b><erml:Page fill="textbox" tooltip="Page No" required="false" validation="" LabelKey="OriginalDeedPage"></erml:Page></b></span> in the county of <b><erml:County id="0710" master="RecCounty" tooltip="County Recorded">Cache</erml:County>,
+          </b> State of <b><erml:State tooltip="State Recorded">UT</erml:State></b></div>
+        <div class="Data" id="ReRecord" style="display:inline;">
+          <span LabelKey="ReRecord" style="display:none">
+            <erml:Multiple tooltip="Re Recorded Info" formatting="" max="10">
+              <erml:Other id="" type="ReRecord">
+                <span>
+                  Re-Recorded on
+                  <b><erml:Date fill="textbox" DateType="RE-RECORDED" id="0706" validation="mm/dd/yyyy" LabelKey="ReRecord" tooltip="Re-Recording Date 1"></erml:Date>,
+                  </b><span LabelKey="ReDeedBook 1" style="display:none">
+                    In Book/Reel/Liber:
+                    <b><erml:ReBook fill="textbox" id="0707" LabelKey="ReDeedBook 1" tooltip="Re Book Number 1"></erml:ReBook>,
+                    </b></span><span LabelKey="ReDeedPage 1" style="display:none">
+                    Page/Folio:
+                    <b><erml:RePage fill="textbox" id="0708" LabelKey="ReDeedPage 1" tooltip="Re Page Number 1"></erml:RePage>,
+                    </b></span><span id="InstrumentNo"><span LabelKey="ReInstrumentNo 1" style="display:none">
+                      as Instrument Number:
+                      <b><erml:EntryNo2 fill="textbox" id="0709" LabelKey="ReInstrumentNo 1" tooltip="Re Instrument Number 1"></erml:EntryNo2></b></span></span></span>
+              </erml:Other>
+            </erml:Multiple>
+          </span>
+        </div>
+        <span LabelKey="RefDoc" style="display:none">
+          <div class="Data" id="DocReference">
+            <erml:Multiple tooltip="Chain of Title Document(s) Reference" formatting="" max="15">
+              <erml:Other id="" type="Ref Doc">
+                <br style="line-height:4pt;" />
+                <span LabelKey="RefDocName 1" style="display:none">
+                  <b>
+                    <erml:RefDocName fill="textbox" required="false" validation="" tooltip="Reference Document Type 1" LabelKey="RefDocName 1"></erml:RefDocName>
+                  </b>
+                </span>
+                <span LabelKey="RefDocDate 1" style="display:none">
+                  Dated:
+                  <b><erml:Date DateType="RefDocDate" fill="textbox" required="false" validation="mmddyyyy" id="0721" tooltip="Reference Document Execution Date (ie. mm/dd/yyyy) 1" LabelKey="RefDocDate 1"></erml:Date></b></span>
+                <span LabelKey="RefDoc" style="display:none">
+                  Recorded:
+                  <b><erml:Date DateType="RECORDED" fill="textbox" required="false" validation="mmddyyyy" LabelKey="RefDoc" id="0722" tooltip="Reference Document Recording Date (ie. mm/dd/yyyy) 1"></erml:Date></b></span>
+                <span LabelKey="RefDocBook 1" style="display:none">
+                  in Book/Reel/Liber:
+                  <b><erml:Book2 fill="textbox" required="false" validation="" id="0723" tooltip="Reference Document Book (ie. 1129) 1" LabelKey="RefDocBook 1"></erml:Book2></b></span>
+                <span LabelKey="RefDocPage 1" style="display:none">
+                  Page/Folio:
+                  <b><erml:Page2 fill="textbox" required="false" validation="" id="0724" tooltip="Reference Document Page (ie. 12) 1" LabelKey="RefDocPage 1"></erml:Page2></b></span>
+                <span LabelKey="RefDocInstrumentNO 1" style="display:none">
+                  as Instrument No.:
+                  <b><erml:EntryNo3 Type="RefDocDocumentNo" fill="textbox" id="0725" validation="" tooltip="Reference Document Instrument No (ie. 123546879562) 1" LabelKey="RefDocInstrumentNO 1"></erml:EntryNo3></b></span>
+                <span LabelKey="RefDocBene 1" style="display:none">
+                  Beneficiary:
+                  <b><erml:Name Type="RefDocBene" fill="textbox" id="0727" tooltip="Reference Document Beneficiary 1" LabelKey="RefDocBene 1"></erml:Name></b></span>
+                <span LabelKey="RefDocOrigBene 1" style="display:none">
+                  Original Beneficiary:
+                  <b><erml:Name Type="RefDocBene" fill="textbox" id="0727" tooltip="Reference Document Original Beneficiary 1" LabelKey="RefDocOrigBene 1"></erml:Name></b></span>
+                <span LabelKey="RefDocBorrower 1" style="display:none">
+                  Borrower:
+                  <b><erml:Name Type="RefDocAssignee" fill="textbox" tooltip="Reference Document Borrower 1" LabelKey="RefDocBorrower 1"></erml:Name></b></span>
+                <span LabelKey="RefDocAssignee 1" style="display:none">
+                  Assignee:
+                  <b><erml:Name Type="RefDocAssignee" fill="textbox" tooltip="Reference Document Assignee 1" LabelKey="RefDocAssignee 1"></erml:Name></b></span>
+                <span LabelKey="RefDocAssignor 1" style="display:none">
+                  Assignor:
+                  <b><erml:Name Type="RefDocAssignee" fill="textbox" tooltip="Reference Document Assignor 1" LabelKey="RefDocAssignor 1"></erml:Name></b></span>
+                <span LabelKey="RefDocLoanAmt 1" style="display:none">
+                  Loan Amount:
+                  <b>
+                    $<erml:Amount Type="RefDocLoanAmt" fill="textbox" id="0728" tooltip="Reference Document Loan Amount 1" LabelKey="RefDocLoanAmt 1"></erml:Amount></b></span>
+                <span LabelKey="RefDocReRecording 1" style="display:none">
+                  Re-Recorded on
+                  <b><erml:Date fill="textbox" validation="mmddyyyy" id="0722" tooltip="Ref Doc Re-Recording Date 1" LabelKey="RefDocReRecording 1"></erml:Date></b><span LabelKey="RefDocReDeedBook 1" style="display:none">
+                    in Book/Reel/Liber:
+                    <b><erml:Name fill="textbox" id="0723" tooltip="Ref Doc Re Book Number 1" LabelKey="RefDocReDeedBook 1"></erml:Name></b></span><span LabelKey="RefDocReDeedPage 1" style="display:none">
+                    Page/Folio:
+                    <b><erml:Name fill="textbox" id="0724" tooltip="Ref Doc Re Page Number 1" LabelKey="RefDocReDeedPage 1"></erml:Name></b></span><span LabelKey="RefDocReInstrumentNo 1" style="display:none">
+                    as Instrument Number:
+                    <b><erml:Name fill="textbox" id="0725" tooltip="Ref Doc Re Instrument Number 1" LabelKey="RefDocReInstrumentNo 1"></erml:Name></b></span></span>
+              </erml:Other>
+              <br style="line-height:4pt;" />
+            </erml:Multiple>
+          </div>
+        </span>
+      </erml:ReferencedInfo>
+      <div class="Data" id="comment" />
+      <div class="Data" id="LegalDesc">
+        <br style="line-height:4pt;" />
+        <span LabelKey="LegalDescription" style="display:none">Legal:</span>
+        <span>
+          <erml:LegalDescBlock>
+            <span LabelKey="Lot" style="display:none">
+              Lot
+              <b><erml:Multiple tooltip="Lot" formatting="" max="6"><erml:Lot fill="textbox" tooltip="Lot" id="0802" required="false" validation="" LabelKey="Lot"></erml:Lot></erml:Multiple></b></span>
+            <span LabelKey="Block" style="display:none">
+              Block <b><erml:Block Rcrd="" fill="textbox" tooltip="Block" id="0803" required="false" LabelKey="Block"></erml:Block></b></span>
+            <span LabelKey="Subdivision" style="display:none">
+              Subdivision
+              <b><erml:Subdivision Rcrd="" fill="textbox" tooltip="Subdivision" id="0804" required="false" validation="" LabelKey="Subdivision"></erml:Subdivision></b></span>
+            <span LabelKey="Section" style="display:none">
+              Section: <b><erml:Section Rcrd="" fill="textbox" tooltip="Section" id="0805" required="false" LabelKey="Section"></erml:Section></b></span>
+            <span LabelKey="Township" style="display:none">
+              Township:
+              <b><erml:Township Rcrd="" fill="textbox" tooltip="Township" id="0806" required="false" LabelKey="Township"></erml:Township></b></span>
+            <span LabelKey="Range" style="display:none">
+              Range
+              <b><erml:Range Rcrd="" fill="textbox" tooltip="Range" id="0807" required="false" LabelKey="Range"></erml:Range></b></span>
+            <span>
+              <erml:Plat Rcrd="" fill="textbox" tooltip="Plat" required="false" validation="" />
+            </span>
+            <span>
+              <erml:QtrSection Rcrd="" fill="textbox" tooltip="Quarter Section" required="false" validation="" />
+            </span>
+            <span>
+              <erml:QtrQtrSection Rcrd="" fill="textbox" tooltip="Quarter Quarter Section" required="false" validation="" />
+            </span>
+            <span>
+              <erml:Meridian Rcrd="" fill="textbox" tooltip="Meridian" required="false" validation="" />
+            </span>
+            <span>
+              <B>
+                <erml:LegalDesc Rcrd="" fill="textarea" tooltip="Legal Description" required="true" validation="" LabelKey="LegalDescription"></erml:LegalDesc>
+              </B>
+            </span>
+          </erml:LegalDescBlock>
+        </span>
+      </div>
+      <span LabelKey="AssessorsParcelID" style="display:none">
+        <div class="Data">
+          <div id="PIN" class="Data">
+            <span id="PINLabel" style="">
+              Parcel Tax ID:
+            </span>
+            <b>
+              <erml:Multiple tooltip="Parcel Number" formatting="" max="10">
+                <erml:ParcelNo id="0713" fill="textbox" tooltip="Parcel No" master="PIN" required="false" validation="" LabelKey="AssessorsParcelID" />
+              </erml:Multiple>
+            </b>
+          </div>
+        </div>
+      </span>
+      <span LabelKey="PropertyAddress" id="PropAddy" class="Data" style="display:none">
+        <div id="PropertyAddress">
+          Property Address:
+          <b><erml:Multiple tooltip="Property Address" type="Property Address" formatting="" max="10"><erml:Other type="PropertyAddress"><span LabelKey="PropertyAddress" id="PropAddy" style="display:none"><erml:StreetAddress1 id="0714" type="PropertyStreetAddress" fill="textbox" tooltip="Property Street Address Line 1" required="false" validation="" LabelKey="PropertyAddress"></erml:StreetAddress1><erml:StreetAddress2 id="0737" type="PropertyStreetAddress" fill="textbox" tooltip="Property Street Address Line 2" required="false" validation="" LabelKey="PropertyAddress"></erml:StreetAddress2><erml:City id="0715" type="PropertyCity" fill="textbox" tooltip="Property City" required="false" validation="" LabelKey="PropertyAddress"></erml:City>,
+                  <erml:Other id="0716" type="PropertyState" fill="textbox" tooltip="Property State" required="false" validation="" LabelKey="PropertyAddress"></erml:Other><erml:Zip id="0717" type="PropertyZip" fill="textbox" tooltip="Property Zip" required="false" validation="" LabelKey="PropertyAddress"></erml:Zip></span></erml:Other></erml:Multiple></b></div>
+      </span>
+      <br style="line-height:4pt;" />
+      <div class="Data">
+        <div class="Data">
+          <div style="page-break-inside: avoid;">
+            IN WITNESS WHEREOF, the undersigned has caused this instrument to be executed on this date of
+            <b><erml:Date id="1003" DateType="TODAY" required="false" validation="mmddyyyy" LabelKey="TodayDate">11/04/2019</erml:Date>.
+            </b></div>
+          <br style="line-height:4pt;" />
+          <erml:SigArea>
+            <div id="SigFormat">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr align="left">
+                  <td>
+                    <div class="Data" id="SignerCo">
+                      <b>
+                        <erml:Company Rcrd="" fill="textarea" cols="65" rows="3" tooltip="Signer Company (ie. ABC Credit Union)" master="SigCo" id="0901" required="true" validation=""></erml:Company>
+                      </b>
+                    </div>
+                    <span id="POA" class="Data" LabelKey="POARecordingDate" style="display:none">
+                      Power of Attorney previously recorded on
+                      <b><erml:Date id="1570" fill="textbox" tooltip="POA Recording Date" DateType="RECORDED" LabelKey="POARecordingDate" required="false" validation=""></erml:Date>,
+                      </b><span LabelKey="POAEntryNo" style="display:none">
+                        as Instrument No.
+                        <b><erml:POAEntryNo id="1571" fill="textbox" tooltip="POA Instrument Number" LabelKey="POAEntryNo" required="false" validation=""></erml:POAEntryNo>,
+                        </b></span><span LabelKey="POABook" style="display:none">
+                        in Book No.
+                        <b><erml:POABook id="1572" fill="textbox" tooltip="POA Book Number" LabelKey="POABook" required="false" validation=""></erml:POABook>,
+                        </b>
+                        at Page No.
+                        <b><erml:POAPage id="1573" fill="textbox" tooltip="POA Page Number" LabelKey="POABook" required="false" validation=""></erml:POAPage>.
+                        </b></span></span>
+                    <div style="font-size:8pt">
+                      <erml:Company Rcrd="" fill="textbox" tooltip="Company Addendum" required="false" validation="" />
+                    </div>
+                    <br style="line-height:4pt;" />
+                    <div class="Data" style="color:red;border-bottom:thin solid black;width:2in">
+                      <erml:Signature SigID="" Name="" Certificate="" HashAlg="" Signature="" Timestamp="" />
+                      <span style="zoom:.25;">
+                        <erml:Other type="SignerSignature" master="SignerSig" class="Image" ImageBase64="" />
+                      </span>
+                    </div>
+                    <span LabelKey="SignerName">
+                      <div class="Data">
+                        Name:
+                        <b><erml:Name id="0904" fill="textbox" tooltip="Signer Name" master="SigName" required="true" validation="" LabelKey="SignerName">Michele Wingate</erml:Name></b></div>
+                    </span>
+                    <span LabelKey="SignerTitle">
+                      <div class="Data">
+                        Title:
+                        <b><erml:Title id="0905" fill="textbox" tooltip="Signer Title" master="SigTitle" required="true" validation="" LabelKey="SignerTitle">Vice President</erml:Title></b></div>
+                    </span>
+                  </td>
+                  <td width="50%" id="CorporateSeal" />
+                </tr>
+              </table>
+            </div>
+          </erml:SigArea>
+        </div>
+      </div>
+      <div style="page-break-inside: avoid;">
+        <erml:WitnessInfo>
+          <div class="Data">
+            <table class="Data">
+              <tr>
+                <td>
+                  STATE OF
+                  <b><erml:State id="1001" fill="textbox" tooltip="State Notarized In" master="NotaryState" required="true" validation="">FL</erml:State></b><div class="Data">
+                    COUNTY OF
+                    <b><erml:County id="1002" fill="textbox" tooltip="County Notarized In" master="NotaryCounty" required="true" validation="">Clay</erml:County></b></div></td>
+                <td>} s.s.</td>
+              </tr>
+            </table>
+            <div id="APA">
+              On
+              <b><erml:Date id="1003" DateType="TODAY" required="false" validation="mmddyyyy" LabelKey="TodayDate">11/04/2019</erml:Date>,
+              </b>
+              before me,
+              <b><erml:Other id="1004" type="NOTARY NAME" slave="NotaryName" required="false" validation="">Michele Wingate</erml:Other>,
+              </b>
+              Notary Public, personally appeared
+              <b><erml:Other><erml:Ref id="" type="Reference" tooltip="Grantee Reference" siblingFill="dropdown" allowOther="false" src="file://ingeo\ref.txt" required="false" validation="" /><erml:Name id="1005" slave="SigName" required="false" validation="">Michele Wingate</erml:Name>,
+                  <erml:Title id="1006" slave="SigTitle" required="false" validation="">Vice President</erml:Title></erml:Other></b><span LabelKey="SignerCompany" style="display:none">
+                of
+                <b><erml:Company id="0901" slave="SigCo" required="false" validation="" LabelKey="SignerCompany"></erml:Company></b></span><b><span style="margin-left:-3px;">,</span></b>
+              personally known to me (or proved to me the basis of satisfactory evidence) to be the person whose name is
+              subscribed to the within instrument and acknowledged to me that she/he/they executed the same in her/his/their authorized capacity(ies), and
+              that by her/his/their signature(s) on the instrument the person(s), or the entity upon behalf of which the person(s) acted, executed the
+              instrument.
+            </div>
+          </div>
+        </erml:WitnessInfo>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <erml:NotaryArea>
+              <div class="Data">
+                <br style="line-height:4pt;" />
+                Witness my hand and official seal.
+
+
+                <br style="line-height:4pt;" /><br style="line-height:4pt;" /><table width="100%"><tbody><tr><td width="50%"><div style="BORDER-BOTTOM: black thin solid;WIDTH=2in;color:red"><b><erml:NotarySignature Timestamp="" Signature="" HashAlg="" Certificate="" Name="" SigID="" /><span style="zoom:.25;"><erml:Other type="NotarySignature" master="NotarySig" class="Image" ImageBase64="" /></span></b></div><div class="Data"><erml:Name fill="textbox" tooltip="Notary Name" master="NotaryName" id="1004" required="true" validation="">Michele Wingate</erml:Name></div><div class="Data">Notary Public for said state and county</div><span LabelKey="NotaryCommissionNo"><div class="Data">
+                            My commission number is:
+                            <b><erml:Other fill="textbox" type="NOTARY COMMISSION NUMBER" id="1107" tooltip="Notary Commission Number" master="NotaryCommissionNumber" required="false" validation="" LabelKey="NotaryCommissionNo">12345678</erml:Other></b></div></span><span LabelKey="NotaryCommissionDate"><div class="Data" id="NCD">
+                            My Commission Expires:
+                            <b><erml:Date DateType="Expiration" master="NotaryCommissionDate" Rcrd="" fill="textbox" tooltip="Date Commission Expires (ie. mm/dd/yyyy)" masking-keepstatic="true" masking="(99/99/9999)|(aaaaaaaa aaaaaaaaaa)" id="1104" required="true" validation="mm/dd/yyyy" LabelKey="NotaryCommissionDate">05/14/2019</erml:Date></b></div></span></td><td width="50%"><span style="zoom:.40;"><erml:Other type="NotarySeal" master="NotarySeal" class="Image" ImageBase64="" /></span></td></tr></tbody></table></div>
+            </erml:NotaryArea>
+            <div style="display:none;" id="VersionNumber" class="Data" align="center">
+              Version: <erml:VersionNumber>eef790b8</erml:VersionNumber></div>
+            <br style="line-height:4pt;" />
+          </tr>
+        </table>
+      </div>
+    </body>
+  </html>
+  <erml:FeeCalcParams>
+    <erml:FeeCalcParam name="Number of Descriptions" id="9999" description="Please enter the number of descriptions. " type="Input" masking="integer" placeholder="0" values="" />
+  </erml:FeeCalcParams>
+</erml:Document>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCC_Coding_Exam", "UCC_Coding_Exam.csproj", "{FDA09D26-8F82-42E0-9561-118B06FC26C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDA09D26-8F82-42E0-9561-118B06FC26C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA09D26-8F82-42E0-9561-118B06FC26C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA09D26-8F82-42E0-9561-118B06FC26C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA09D26-8F82-42E0-9561-118B06FC26C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06ED8FB6-E2CD-4E50-AD6D-CC974D6D14BC}
+	EndGlobalSection
+EndGlobal
